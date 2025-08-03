@@ -16,17 +16,12 @@ class TestUrbanRoutes:
         cls.driver.get(data.urban_routes_url)
         cls.routes_page = urp.UrbanRoutesPage(cls.driver)
 
-    def test_set_route(self):
-        self.driver.get(data.urban_routes_url)
-        routes_page = urp.UrbanRoutesPage(self.driver)
         address_from = data.address_from
         address_to = data.address_to
         routes_page.set_route(address_from, address_to)
         assert routes_page.get_from() == address_from
         assert routes_page.get_to() == address_to
 
-    def test_option(self):
-        self.routes_page.click_personal_button()
 
 
 

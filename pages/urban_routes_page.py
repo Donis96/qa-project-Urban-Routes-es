@@ -25,7 +25,6 @@ class UrbanRoutesPage:
 
     def __init__(self, driver):
         self.driver = driver
-        self.wait = WebDriverWait(driver, 5)
 
     def set_from(self, from_address):
        #  self.driver.find_element(*self.from_field).send_keys(from_address)
@@ -61,8 +60,6 @@ def select_comfort_rate(self):
     self.driver.find_element(*self.comfort_rate_button).click()
 
 
-def fill_phone_number(self, phone_number):
-    self.driver.find_element(*self.phone_input_field).send_keys(phone_number)
 
 
 def add_credit_card(self, card_number, card_cvv):
